@@ -1,0 +1,10 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+
+Options -Indexes
+ErrorDocument 403 "No tiene permiso para acceder a este Recurso"
